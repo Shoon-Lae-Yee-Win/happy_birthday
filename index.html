@@ -1,45 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cut">
-<title>Happy Birthday 🎂</title>
-<meta name="description" content="A little birthday surprise, just for you.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+<title>Happy Birthday Koko 🎂</title>
+<meta name="description" content="大好きな彼氏へ、小さなお誕生日サプライズ。">
+<meta name="theme-color" content="#ecdcfc">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Quicksand:wght@400;600;700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg1:#1b1230; --bg2:#3a2557; --bg3:#5b3b78;
-  --glass:rgba(255,255,255,.08); --glass-b:rgba(255,255,255,.18);
-  --text:#f6eefc; --muted:#cbb8e0; --accent:#f3a6d0; --accent2:#c9a7ff; --gold:#ffd27a;
+  --bg1:#f8f2ff; --bg2:#ecdcfc; --bg3:#e0c9fa;
+  --glass:rgba(255,255,255,.6); --glass-b:rgba(160,110,220,.28);
+  --text:#3e2463; --muted:#7c64a3; --accent:#b45fd6; --accent2:#a98bf5; --gold:#b9831f;
+  --title:#5d2d93;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden}
 body{
-  font-family:"Quicksand","Padauk",system-ui,sans-serif;color:var(--text);
+  font-family:"Zen Maru Gothic",system-ui,sans-serif;color:var(--text);
   background:radial-gradient(ellipse at 30% 20%,var(--bg3),transparent 60%),
-             radial-gradient(ellipse at 80% 90%,#2a1b45,transparent 60%),
+             radial-gradient(ellipse at 80% 90%,#f3d9f5,transparent 60%),
              linear-gradient(160deg,var(--bg1),var(--bg2));
+  background-color:var(--bg1);
   user-select:none;
 }
-#snow{position:fixed;inset:0;pointer-events:none;z-index:0}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:0}
 .scene{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:16px;
   opacity:0;visibility:hidden;transform:scale(.96);transition:opacity .6s,transform .6s,visibility .6s;z-index:1}
 .scene.active{opacity:1;visibility:visible;transform:none}
 .card{width:min(360px,100%);background:var(--glass);border:1px solid var(--glass-b);border-radius:28px;
   padding:28px 22px;text-align:center;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  box-shadow:0 20px 60px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.15)}
-h1,h2{font-family:"Playfair Display",serif;font-weight:800}
-h2{font-size:1.5rem;margin-bottom:8px;color:#ffe3f3}
-p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
+  box-shadow:0 20px 60px rgba(120,70,180,.18),inset 0 1px 0 rgba(255,255,255,.8)}
+h1,h2{font-family:"Playfair Display","Zen Maru Gothic",serif;font-weight:800}
+h2{font-size:1.4rem;margin-bottom:8px;color:var(--title)}
+p.sub{color:var(--muted);font-size:.9rem;line-height:1.7}
 .btn{display:block;width:100%;margin-top:14px;padding:13px 18px;border:0;border-radius:999px;cursor:pointer;
-  font:700 1rem "Quicksand","Padauk",sans-serif;color:#2a1640;
-  background:linear-gradient(135deg,#f6d6ee,#d9c2ff);box-shadow:0 6px 20px rgba(201,167,255,.35);
+  font:700 1rem "Zen Maru Gothic",sans-serif;color:#fff;
+  background:linear-gradient(135deg,#c99cf0,#9f7be8);box-shadow:0 6px 20px rgba(159,123,232,.35);
   transition:transform .15s,filter .15s}
 .btn:active{transform:scale(.96)} .btn:hover{filter:brightness(1.05)}
-.btn.ghost{background:rgba(255,255,255,.12);color:var(--text);box-shadow:none;border:1px solid var(--glass-b)}
+.btn.ghost{background:rgba(255,255,255,.65);color:var(--text);box-shadow:none;border:1px solid var(--glass-b)}
 .row{display:flex;gap:10px}.row .btn{flex:1}
 .pop{animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
 @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
@@ -53,11 +56,11 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
 .dot{width:13px;height:13px;border-radius:50%;border:2px solid var(--muted);transition:.2s}
 .dot.on{background:var(--accent);border-color:var(--accent);box-shadow:0 0 12px var(--accent)}
 .pad{display:grid;grid-template-columns:repeat(3,64px);gap:16px;justify-content:center}
-.key{width:64px;height:64px;border-radius:50%;border:1px solid var(--glass-b);background:rgba(255,255,255,.07);
-  color:var(--text);font:600 1.4rem "Quicksand";cursor:pointer;transition:.15s}
-.key:active{background:rgba(243,166,208,.35);transform:scale(.92)}
+.key{width:64px;height:64px;border-radius:50%;border:1px solid var(--glass-b);background:rgba(255,255,255,.7);
+  color:var(--text);font:600 1.4rem "Zen Maru Gothic";cursor:pointer;transition:.15s}
+.key:active{background:rgba(180,95,214,.25);transform:scale(.92)}
 .key.fn{font-size:1rem;color:var(--accent)}
-.hint{margin-top:16px;font-size:.8rem;color:var(--muted);min-height:1.2em}
+.hint{margin-top:16px;font-size:.85rem;color:var(--muted);min-height:1.2em}
 
 /* cake */
 .cake-wrap{position:relative;width:220px;height:230px;margin:0 auto}
@@ -69,64 +72,73 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
 .match.used{opacity:.3;pointer-events:none}
 
 /* gift */
-.gift-row{display:flex;justify-content:center;gap:16px;font-size:4.2rem;margin:20px 0}
+.gift-row{display:flex;justify-content:center;gap:22px;font-size:4.2rem;margin:20px 0}
 .gift-row span{cursor:pointer;transition:transform .2s}
 .gift-row span:hover{transform:scale(1.1) rotate(-4deg)}
-.reminder{font-size:.8rem;color:var(--muted);background:rgba(255,255,255,.06);border-radius:12px;padding:8px 12px;border:1px dashed var(--glass-b)}
+.reminder{font-size:.85rem;color:var(--muted);background:rgba(255,255,255,.5);border-radius:12px;padding:8px 12px;border:1px dashed var(--glass-b)}
 
 /* letter */
-.letter{background:rgba(255,255,255,.06);border:1px solid var(--glass-b);border-radius:18px;padding:18px;
-  text-align:left;max-height:46vh;overflow-y:auto;line-height:1.8;font-size:.95rem;white-space:pre-line}
+.letter{background:rgba(255,255,255,.55);border:1px solid var(--glass-b);border-radius:18px;padding:18px;
+  text-align:left;max-height:50vh;overflow-y:auto;line-height:1.9;font-size:.95rem;white-space:pre-line}
 .letter::-webkit-scrollbar{width:5px}.letter::-webkit-scrollbar-thumb{background:var(--accent2);border-radius:9px}
 .caret::after{content:"▍";animation:blink 1s infinite;color:var(--accent)}
 @keyframes blink{50%{opacity:0}}
 
 /* avatar */
-.avatar{width:96px;height:96px;margin:0 auto 14px;border-radius:24px;background:rgba(0,0,0,.25);
+.avatar{width:96px;height:96px;margin:0 auto 14px;border-radius:24px;background:rgba(255,255,255,.7);
   display:flex;align-items:center;justify-content:center;font-size:3.4rem;overflow:hidden}
 .avatar img{width:100%;height:100%;object-fit:cover}
 #qMsg{min-height:1.4em;margin-top:10px;color:var(--accent);font-weight:700}
 
-/* game */
-#game{position:fixed;inset:0;z-index:2;display:none;background:#0b0a16;touch-action:none;cursor:crosshair}
-#gameHud{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:3;display:none;
-  padding:8px 22px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--glass-b);
-  font:700 .95rem "Playfair Display",serif}
-#gameHud b{color:#7dffb0}
-#gameDone{position:fixed;inset:0;z-index:4;display:none;align-items:center;justify-content:center;flex-direction:column;gap:6px;
-  font:800 2rem "Playfair Display",serif;color:#a8ffd6;text-shadow:0 0 20px rgba(125,255,176,.6);pointer-events:none}
+/* heart-catch game */
+#game{position:fixed;inset:0;z-index:2;display:none;overflow:hidden;touch-action:manipulation}
+#gameHud{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:3;display:none;white-space:nowrap;
+  padding:8px 22px;border-radius:999px;background:rgba(255,255,255,.8);border:1px solid var(--glass-b);
+  font:700 .95rem "Zen Maru Gothic";color:var(--text)}
+#gameHud b{color:var(--accent)}
+.target{position:absolute;font-size:3.4rem;line-height:1;cursor:pointer;transform:translate(-50%,-50%);
+  transition:left .45s cubic-bezier(.3,1.5,.5,1),top .45s cubic-bezier(.3,1.5,.5,1),opacity .25s;
+  filter:drop-shadow(0 6px 12px rgba(150,90,210,.35))}
+.target span{display:block;animation:wiggle 1s ease-in-out infinite}
+@keyframes wiggle{25%{transform:rotate(-10deg) scale(1.05)}75%{transform:rotate(10deg) scale(.95)}}
+.target.hide{opacity:0;pointer-events:none}
+.say{position:absolute;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;
+  font:700 1.1rem "Zen Maru Gothic";color:var(--accent);text-shadow:0 2px 0 #fff,0 0 10px #fff;animation:sayUp 1.1s forwards}
+@keyframes sayUp{from{opacity:1;margin-top:0}to{opacity:0;margin-top:-60px}}
+#gameDone{position:fixed;inset:0;z-index:4;display:none;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+  font:800 2rem "Zen Maru Gothic";color:#7b3fbf;text-shadow:0 0 20px #fff;pointer-events:none;text-align:center}
 
 /* love */
 .photo{width:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#ffd0e8,#d8c4ff);
-  display:flex;align-items:center;justify-content:center;font-size:4rem;margin:12px 0;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  display:flex;align-items:center;justify-content:center;font-size:4rem;margin:12px 0;box-shadow:0 8px 24px rgba(120,70,180,.2)}
 .photo img{width:100%;height:100%;object-fit:cover}
-.love-text{text-align:left;font-size:.9rem;line-height:1.7;color:var(--text);max-height:22vh;overflow-y:auto}
-.tag{color:var(--accent);font-weight:700;font-size:.85rem;margin-top:8px;text-align:left}
+.love-text{text-align:left;font-size:.92rem;line-height:1.8;color:var(--text);max-height:24vh;overflow-y:auto;white-space:pre-line}
+.tag{color:var(--accent);font-weight:700;font-size:.9rem;margin-top:8px;text-align:left}
 
 /* final */
-#final .big{font-size:clamp(3rem,14vw,5rem);line-height:1;color:#fff;
-  text-shadow:0 0 30px rgba(243,166,208,.7),0 4px 0 rgba(0,0,0,.2)}
-#final .name{font-family:"Playfair Display",serif;font-style:italic;font-size:1.4rem;color:var(--gold);margin:14px 0 4px}
+#final .big{font-size:clamp(3rem,14vw,5rem);line-height:1;color:#8a45cf;
+  text-shadow:0 0 30px rgba(255,255,255,.9),0 4px 0 rgba(160,110,220,.25)}
+#final .name{font-family:"Playfair Display",serif;font-style:italic;font-size:1.6rem;color:var(--gold);margin:14px 0 6px}
 .floaty{position:fixed;bottom:-140px;z-index:1;pointer-events:none;animation:rise linear forwards}
-.floaty.pic{width:86px;height:86px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.7);box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.floaty.pic{width:86px;height:86px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.9);box-shadow:0 6px 20px rgba(120,70,180,.3)}
 .floaty.emo{font-size:2.2rem}
 @keyframes rise{to{transform:translateY(calc(-100vh - 280px)) rotate(var(--r,20deg))}}
 
 #confetti{position:fixed;inset:0;pointer-events:none;z-index:5}
 #musicBtn{position:fixed;top:14px;right:14px;z-index:6;width:42px;height:42px;border-radius:50%;border:1px solid var(--glass-b);
   background:var(--glass);color:var(--text);font-size:1.1rem;cursor:pointer;display:none;backdrop-filter:blur(8px)}
-@media (prefers-reduced-motion:reduce){.float,.floaty{animation:none}}
+@media (prefers-reduced-motion:reduce){.float,.floaty,.target span{animation:none}}
 </style>
 </head>
 <body>
-<canvas id="snow"></canvas>
+<canvas id="hearts"></canvas>
 <canvas id="confetti"></canvas>
-<button id="musicBtn" aria-label="Toggle music">🎵</button>
+<button id="musicBtn" aria-label="音楽のオン・オフ">🎵</button>
 
 <!-- 1. Passcode -->
 <section class="scene active" id="lock">
   <div class="card">
-    <h2 style="font-size:1.1rem;letter-spacing:.12em">ENTER PASSCODE</h2>
+    <h2 style="font-size:1.15rem;letter-spacing:.1em">パスコードを入力してね</h2>
     <p class="sub" id="lockHint"></p>
     <div class="dots" id="dots"></div>
     <div class="pad" id="pad"></div>
@@ -141,42 +153,42 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
       <svg viewBox="0 0 220 230" aria-hidden="true">
         <defs>
           <linearGradient id="top" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#b9a4ff"/><stop offset="1" stop-color="#8f74e8"/></linearGradient>
-          <linearGradient id="bot" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ff9fb8"/><stop offset="1" stop-color="#e86f90"/></linearGradient>
+          <linearGradient id="bot" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e6b8ff"/><stop offset="1" stop-color="#c286ea"/></linearGradient>
           <radialGradient id="glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".8"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
         </defs>
-        <ellipse cx="110" cy="214" rx="100" ry="12" fill="#cfc7e6"/>
+        <ellipse cx="110" cy="214" rx="100" ry="12" fill="#d9c8f2"/>
         <rect x="22" y="140" width="176" height="70" rx="14" fill="url(#bot)"/>
         <path d="M22 150 q22 22 44 0 q22 22 44 0 q22 22 44 0 q22 22 44 0 v-6 h-176z" fill="#fff" opacity=".95"/>
         <rect x="45" y="88" width="130" height="58" rx="12" fill="url(#top)"/>
         <path d="M45 98 q16 18 32 0 q16 18 33 0 q16 18 33 0 q16 18 32 0 v-6 h-130z" fill="#fff" opacity=".95"/>
-        <g fill="#fff3"><circle cx="70" cy="125" r="4"/><circle cx="150" cy="120" r="4"/><circle cx="60" cy="185" r="5"/><circle cx="165" cy="188" r="5"/><circle cx="110" cy="190" r="5"/></g>
-        <rect x="104" y="56" width="12" height="34" rx="3" fill="#ffe3f3"/>
-        <path d="M104 62 l12 6 M104 72 l12 6 M104 82 l12 6" stroke="#f3a6d0" stroke-width="3"/>
+        <g fill="#fff6"><circle cx="70" cy="125" r="4"/><circle cx="150" cy="120" r="4"/><circle cx="60" cy="185" r="5"/><circle cx="165" cy="188" r="5"/><circle cx="110" cy="190" r="5"/></g>
+        <rect x="104" y="56" width="12" height="34" rx="3" fill="#fff"/>
+        <path d="M104 62 l12 6 M104 72 l12 6 M104 82 l12 6" stroke="#b45fd6" stroke-width="3"/>
         <g class="flame"><circle cx="110" cy="42" r="26" fill="url(#glow)"/><path d="M110 22 C120 36 118 50 110 52 C102 50 100 36 110 22z" fill="#ffb347"/><path d="M110 32 C115 40 114 48 110 49 C106 48 105 40 110 32z" fill="#fff4c2"/></g>
       </svg>
     </div>
-    <p class="sub" id="cakeMsg">Light the candle and make a wish 🕯️</p>
-    <div class="match float" id="match" role="button" aria-label="Light the candle">🔥</div>
-    <button class="btn" id="cakeNext" style="display:none">Next →</button>
+    <p class="sub" id="cakeMsg">ろうそくに火をつけて、願いごとをしてね 🕯️</p>
+    <div class="match float" id="match" role="button" aria-label="ろうそくに火をつける">🔥</div>
+    <button class="btn" id="cakeNext" style="display:none">次へ →</button>
   </div>
 </section>
 
 <!-- 3. Gift -->
 <section class="scene" id="gift">
   <div class="card">
-    <h2>Wow! Look At This ✨</h2>
-    <p class="sub">I prepared something for you…</p>
-    <div class="gift-row"><span class="float">💐</span><span class="float" id="envelope" style="animation-delay:.4s">💌</span></div>
-    <div class="reminder">💡 Reminder: tap the letter to open it</div>
+    <h2>Kokoへの贈りもの ✨</h2>
+    <p class="sub">あなたのために、特別なものを用意したよ…</p>
+    <div class="gift-row"><span class="float gift-open">💜</span><span class="float gift-open" style="animation-delay:.4s">💌</span></div>
+    <div class="reminder">💡 手紙をタップして開けてね</div>
   </div>
 </section>
 
 <!-- 4. Letter -->
 <section class="scene" id="letterScene">
   <div class="card">
-    <h2>Happy Birthday!</h2>
+    <h2>お誕生日おめでとう！</h2>
     <div class="letter" id="letter"></div>
-    <button class="btn" id="letterNext" style="display:none">Next →</button>
+    <button class="btn" id="letterNext" style="display:none">次へ →</button>
   </div>
 </section>
 
@@ -184,7 +196,7 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
 <section class="scene" id="question">
   <div class="card" id="qCard">
     <div class="avatar float" id="qAvatar">🥺</div>
-    <h2 style="font-size:1.15rem;line-height:1.6" id="qText"></h2>
+    <h2 style="font-size:1.1rem;line-height:1.7" id="qText"></h2>
     <div id="qBtns"></div>
     <div id="qMsg"></div>
   </div>
@@ -193,22 +205,22 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
 <!-- 6. Game intro -->
 <section class="scene" id="gameIntro">
   <div class="card">
-    <div class="avatar float">🏹</div>
-    <h2>Let's play a game</h2>
+    <div class="avatar float">💜</div>
+    <h2>ちょっとゲームしよう！</h2>
     <p class="sub" id="gameRule"></p>
-    <p class="sub" style="color:var(--gold);margin-top:8px">⚠️ Tap anywhere to shoot an arrow there</p>
-    <button class="btn" id="startGame">Start game</button>
+    <p class="sub" style="color:var(--gold);margin-top:8px">🐸 カエルはハートじゃないよ（笑）</p>
+    <button class="btn" id="startGame">スタート</button>
   </div>
 </section>
 
 <!-- 7. Eternal love -->
 <section class="scene" id="love">
   <div class="card">
-    <h2>Eternal Love 💖</h2>
+    <h2>永遠の愛 💖</h2>
     <div class="photo" id="lovePhoto">🧸</div>
     <div class="love-text" id="loveText"></div>
     <div class="tag" id="loveTag"></div>
-    <div class="row"><button class="btn ghost" id="loveHome">Home</button><button class="btn" id="loveNext">Next →</button></div>
+    <div class="row"><button class="btn ghost" id="loveHome">最初から</button><button class="btn" id="loveNext">次へ →</button></div>
   </div>
 </section>
 
@@ -216,28 +228,28 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
 <section class="scene" id="iloveyou">
   <div class="card">
     <div class="avatar pop" id="kissAvatar">😽</div>
-    <h2 style="color:var(--accent)">"Muah"</h2>
-    <h2>I Love You!</h2>
+    <h2 style="color:var(--accent)">ちゅっ 💋</h2>
+    <h2>愛してる！</h2>
     <p class="sub" id="iluText"></p>
-    <button class="btn" id="iluNext">Okay 💕</button>
+    <button class="btn" id="iluNext">うん 💕</button>
   </div>
 </section>
 
 <!-- 9. Final -->
 <section class="scene" id="final">
-  <div style="text-align:center;position:relative;z-index:2">
+  <div style="text-align:center;position:relative;z-index:2;padding:0 16px">
     <p class="sub" style="letter-spacing:.3em">✦ ✦ ✦</p>
     <h1 class="big">Happy<br>Birthday</h1>
     <div class="name" id="finalName"></div>
-    <p class="sub" id="finalMsg"></p>
-    <p class="sub" style="margin-top:30px">✨ With Love</p>
-    <button class="btn ghost" id="replay" style="width:auto;display:inline-block;margin-top:24px;padding:10px 24px">↻ Replay</button>
+    <p class="sub" id="finalMsg" style="font-size:1.05rem;color:var(--text);font-weight:700"></p>
+    <p class="sub" style="margin-top:26px" id="finalFrom"></p>
+    <button class="btn ghost" id="replay" style="width:auto;display:inline-block;margin-top:24px;padding:10px 24px">↻ もう一度見る</button>
   </div>
 </section>
 
-<canvas id="game"></canvas>
-<div id="gameHud">Mission: <b id="score">0</b> / <span id="goal">15</span></div>
-<div id="gameDone">Mission Complete ✨<span style="font-size:1rem;color:#fff">Great job!</span></div>
+<div id="game"></div>
+<div id="gameHud">ハート：<b id="score">0</b> / <span id="goal">10</span></div>
+<div id="gameDone">ミッション成功 ✨<span style="font-size:1.1rem;color:var(--text)">さすが私の彼氏！</span></div>
 
 <audio id="music" loop preload="auto"></audio>
 
@@ -247,35 +259,44 @@ p.sub{color:var(--muted);font-size:.9rem;line-height:1.5}
    Put photos in the  images/  folder and music in  music/  then list them below.
    ===================================================================== */
 const CONFIG = {
-  name: "My Love",                 // the birthday person's name
-  from: "Your Koko",               // who it's from
-  passcode: "1104",                // 4 digits, e.g. birthday as MMDD
-  passcodeHint: "Hint: your birthday (MMDD) 🎂",
+  name: "Koko",                    // 彼氏の名前
+  from: "あなたの彼女より 💜",       // 差出人
+  passcode: "96811",
+  passcodeHint: "ヒント：あなたと私だけが知っている数字 🤫💜",
 
   letter:
-`Happy Birthday, my love! 🎂
+`大好きなKokoへ 💜
 
-Today is all about you. Thank you for every smile, every laugh, and every little moment we've shared.
+お誕生日おめでとう！
+今日はあなたが主役の日。でも本当は、あなたがいてくれるだけで、私には毎日が特別な日なんだよ。
 
-You make ordinary days feel special, and I'm so lucky to have you in my life.
+いつも優しくしてくれて、たくさん笑わせてくれて、本当にありがとう。
+あなたの隣にいると、何気ない時間もあたたかくて、幸せな気持ちになれます。
 
-May this year bring you happiness, good health, and everything your heart wishes for.
+私の彼氏になってくれて、ありがとう。
+あなたを好きになったことは、私の人生でいちばん素敵な出来事です。
 
-I'll always be here for you. 💜`,
+この一年が、笑顔と健康と、たくさんの幸せであふれますように。
 
-  question: "As one more present… will you keep me forever? 🥺",
-  answers: { yes: "Yes, of course 💖", no: "No", maybe: "I don't know" },
+これからもずっと、あなたの手を握って、毎日少しずつもっと好きになっていくね。
 
-  balloonsToPop: 15,
+ずっとあなたの彼女より 💜`,
+
+  question: "最後にもうひとつだけ…\nこれからもずっと、私の恋人でいてくれる？🥺",
+  answers: { yes: "もちろん、ずっと 💖", no: "いやだ", maybe: "うーん…" },
+
+  heartsToCatch: 10,
 
   loveMessage:
-`This is just for you, my love.
+`これは、あなただけへのメッセージ。
 
-Every day with you is a gift. You are my happiness, my comfort, and my favourite person in the whole world. Let's make many more beautiful memories together.`,
-  loveTag: "You're my everything 🌸",
+つらい日には私の安らぎで、楽しい日には私の幸せ。
+あなたに出会って、「帰る場所」は人なんだと知りました。
+これからも一緒に、たくさんの素敵な思い出をつくっていこうね。`,
+  loveTag: "あなたは私の永遠の恋人 🌸",
 
-  iLoveYouText: "Thank you for being born. I love you so much!",
-  finalMessage: "Love You So Much 💜",
+  iLoveYouText: "生まれてきてくれて、私を選んでくれて、ありがとう。言葉では足りないくらい、愛してるよ。",
+  finalMessage: "世界でいちばん大好きだよ、Koko 💜",
 
   // Photos (optional). e.g. ["images/1.jpg", "images/2.jpg"]. Empty = cute emoji instead.
   photos: [],
@@ -286,25 +307,35 @@ Every day with you is a gift. You are my happiness, my comfort, and my favourite
 
 const $ = id => document.getElementById(id);
 const rand = (a, b) => a + Math.random() * (b - a);
+const pick = arr => arr[(Math.random() * arr.length) | 0];
 function show(id){
   document.querySelectorAll('.scene').forEach(s => s.classList.toggle('active', s.id === id));
 }
 const photo = i => CONFIG.photos.length ? CONFIG.photos[i % CONFIG.photos.length] : null;
 function setImg(el, src){ if (src){ el.textContent=''; const im=new Image(); im.src=src; im.alt=''; el.appendChild(im);} }
 
-/* ---------- falling snow / sparkles ---------- */
+/* ---------- falling little hearts ---------- */
 (() => {
-  const c = $('snow'), x = c.getContext('2d'); let W, H, flakes = [];
+  const c = $('hearts'), x = c.getContext('2d'); let W, H, hearts = [];
+  const cols = ['rgba(190,140,240,.7)', 'rgba(220,150,230,.65)', 'rgba(170,120,230,.6)', 'rgba(240,170,215,.65)'];
   const size = () => { W = c.width = innerWidth * devicePixelRatio; H = c.height = innerHeight * devicePixelRatio; };
   size(); addEventListener('resize', size);
-  for (let i = 0; i < 70; i++) flakes.push({ x: Math.random(), y: Math.random(), r: rand(1, 3.5), s: rand(.0004, .0014), d: rand(0, 6) });
+  for (let i = 0; i < 45; i++) hearts.push({ x: Math.random(), y: Math.random(), r: rand(4, 9), s: rand(.0006, .0018),
+    d: rand(0, 6), rot: rand(-.4, .4), c: cols[i % cols.length] });
+  function heart(px, py, r, rot){
+    x.save(); x.translate(px, py); x.rotate(rot); x.beginPath();
+    x.moveTo(0, r * .35);
+    x.bezierCurveTo(-r * 1.1, -r * .35, -r * .5, -r * 1.15, 0, -r * .5);
+    x.bezierCurveTo(r * .5, -r * 1.15, r * 1.1, -r * .35, 0, r * .35);
+    x.restore();
+  }
   (function loop(t){
     x.clearRect(0, 0, W, H);
-    for (const f of flakes){
-      f.y += f.s; if (f.y > 1.02){ f.y = -.02; f.x = Math.random(); }
-      const px = (f.x + Math.sin(t / 2000 + f.d) * .01) * W, py = f.y * H, r = f.r * devicePixelRatio;
-      x.beginPath(); x.arc(px, py, r, 0, 7); x.fillStyle = 'rgba(215,190,255,.75)';
-      x.shadowColor = '#c9a7ff'; x.shadowBlur = 8 * devicePixelRatio; x.fill();
+    for (const f of hearts){
+      f.y += f.s; if (f.y > 1.03){ f.y = -.03; f.x = Math.random(); }
+      const px = (f.x + Math.sin(t / 1800 + f.d) * .015) * W, py = f.y * H, r = f.r * devicePixelRatio;
+      heart(px, py, r, f.rot + Math.sin(t / 1200 + f.d) * .25);
+      x.fillStyle = f.c; x.fill();
     }
     requestAnimationFrame(loop);
   })(0);
@@ -313,7 +344,7 @@ function setImg(el, src){ if (src){ el.textContent=''; const im=new Image(); im.
 /* ---------- confetti ---------- */
 const confetti = (() => {
   const c = $('confetti'), x = c.getContext('2d'); let parts = [], running = false;
-  const cols = ['#f3a6d0', '#c9a7ff', '#ffd27a', '#7dd3fc', '#86efac', '#fda4af'];
+  const cols = ['#c99cf0', '#a98bf5', '#f0a6d8', '#ffd27a', '#e9d5ff', '#b45fd6'];
   function burst(n = 160){
     c.width = innerWidth; c.height = innerHeight;
     for (let i = 0; i < n; i++) parts.push({ x: innerWidth / 2, y: innerHeight * .4, vx: rand(-9, 9), vy: rand(-14, -3),
@@ -356,11 +387,11 @@ function press(k){
   [...$('dots').children].forEach((d, i) => d.classList.toggle('on', i < code.length));
   if (code.length === CONFIG.passcode.length){
     if (code === CONFIG.passcode){
-      $('lockMsg').textContent = 'Unlocked 💖';
+      $('lockMsg').textContent = '開いたよ 💖';
       if (CONFIG.music) music.play().catch(() => {});
       setTimeout(() => show('cake'), 500);
     } else {
-      $('lockMsg').textContent = 'Wrong passcode, try again 🥺';
+      $('lockMsg').textContent = 'ちがうよ… もう一回ね 🥺';
       $('lock').querySelector('.card').classList.add('shake');
       setTimeout(() => { $('lock').querySelector('.card').classList.remove('shake'); code = '';
         [...$('dots').children].forEach(d => d.classList.remove('on')); }, 450);
@@ -373,22 +404,22 @@ let cakeStage = 0;
 $('match').onclick = () => {
   if (cakeStage === 0){
     cakeStage = 1; $('cakeWrap').classList.add('lit'); $('match').textContent = '💨';
-    $('cakeMsg').textContent = 'Close your eyes, make a wish… then tap to blow it out 🌬️';
+    $('cakeMsg').textContent = '目を閉じて願いごとをしたら、タップして火を消してね 🌬️';
   } else if (cakeStage === 1){
     cakeStage = 2; $('cakeWrap').classList.remove('lit'); $('match').classList.add('used');
-    $('cakeMsg').innerHTML = `<b style="color:var(--accent)">Happy Birthday, ${CONFIG.name}! 🎉</b><br>I hope your wish comes true.`;
+    $('cakeMsg').innerHTML = `<b style="color:var(--accent)">お誕生日おめでとう、${CONFIG.name}！🎉</b><br>願いごとが全部叶いますように。`;
     confetti(220); $('cakeNext').style.display = 'block';
   }
 };
 $('cakeNext').onclick = () => show('gift');
 
 /* ---------- 3/4. gift & letter ---------- */
-$('envelope').onclick = () => { show('letterScene'); typeLetter(); };
+document.querySelectorAll('.gift-open').forEach(el => el.onclick = () => { show('letterScene'); typeLetter(); });
 function typeLetter(){
   const el = $('letter'), txt = CONFIG.letter; let i = 0; el.textContent = ''; el.classList.add('caret');
   const step = () => {
-    i += 2; el.textContent = txt.slice(0, i); el.scrollTop = el.scrollHeight;
-    if (i < txt.length) setTimeout(step, 28);
+    i += 1; el.textContent = txt.slice(0, i); el.scrollTop = el.scrollHeight;
+    if (i < txt.length) setTimeout(step, 45);
     else { el.classList.remove('caret'); $('letterNext').style.display = 'block'; }
   };
   setTimeout(step, 500);
@@ -397,164 +428,105 @@ function typeLetter(){
 $('letterNext').onclick = () => show('question');
 
 /* ---------- 5. question ---------- */
-$('qText').textContent = CONFIG.question;
+$('qText').innerText = CONFIG.question;
 const qFaces = ['🥺', '😢', '😭', '🥹'];
 let noCount = 0;
 [['no', CONFIG.answers.no], ['yes', CONFIG.answers.yes], ['maybe', CONFIG.answers.maybe]].forEach(([k, label]) => {
   const b = document.createElement('button'); b.className = 'btn'; b.textContent = label; b.dataset.k = k; $('qBtns').appendChild(b);
   b.onclick = () => {
     if (k === 'yes'){
-      $('qAvatar').textContent = '🥰'; $('qMsg').textContent = 'Yay!! I knew it 💖'; confetti(140);
-      setTimeout(() => show('gameIntro'), 1500);
+      $('qAvatar').textContent = '🥰'; $('qMsg').textContent = 'やったー！そう言ってくれると思ってた 💖'; confetti(140);
+      setTimeout(() => show('gameIntro'), 1600);
     } else if (k === 'no'){
       noCount++; $('qAvatar').textContent = qFaces[Math.min(noCount, 3)];
-      $('qMsg').textContent = ['Are you sure? 🥺', 'Really?? 😢', 'Pleaseee 😭', 'The button is tired of you 😤'][Math.min(noCount - 1, 3)];
+      $('qMsg').textContent = ['ほんとに？🥺', 'うそでしょ？😢', 'お願い、「もちろん」って言って 😭', 'このボタン、もう疲れちゃったみたい 😤'][Math.min(noCount - 1, 3)];
       b.style.transform = `scale(${Math.max(.4, 1 - noCount * .18)})`;
       const yes = $('qBtns').querySelector('[data-k=yes]'); yes.style.transform = `scale(${1 + noCount * .08})`;
       if (noCount >= 4) b.style.display = 'none';
       $('qCard').classList.add('shake'); setTimeout(() => $('qCard').classList.remove('shake'), 400);
     } else {
-      $('qAvatar').textContent = '🤔'; $('qMsg').textContent = 'Think again… there is only one right answer 😏';
+      $('qAvatar').textContent = '🤔'; $('qMsg').textContent = 'もう一回考えて… 正解はひとつだけだよ 😏💜';
     }
   };
 });
 
-/* ---------- 6/7. balloon game ---------- */
-$('gameRule').textContent = `Pop ${CONFIG.balloonsToPop} balloons with your bow to unlock the next surprise 🎈`;
-$('goal').textContent = CONFIG.balloonsToPop;
+/* ---------- 6. heart-catch mini game ---------- */
+$('gameRule').textContent = `ぴょんぴょん逃げるハートを${CONFIG.heartsToCatch}回タップしてね。次のサプライズが開くよ 💜`;
+$('goal').textContent = CONFIG.heartsToCatch;
 $('startGame').onclick = startGame;
 
 function startGame(){
-  const cv = $('game'), g = cv.getContext('2d');
-  cv.style.display = 'block'; $('gameHud').style.display = 'block';
+  const area = $('game'); area.innerHTML = '';
+  area.style.display = 'block'; $('gameHud').style.display = 'block';
   document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
-  let W, H, dpr = devicePixelRatio || 1;
-  const size = () => { W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0); };
-  size(); addEventListener('resize', size);
+  let score = 0, done = false;
+  const sweet = ['好き！', '大好き！', 'もっと！', 'ぎゅー！', 'ちゅっ 💋', 'かっこいい！', '最高！', 'さすが！', 'えらい！'];
+  const spot = el => { el.style.left = rand(14, 86) + 'vw'; el.style.top = rand(20, 86) + 'vh'; };
+  const make = emoji => {
+    const el = document.createElement('div'); el.className = 'target';
+    el.innerHTML = `<span>${emoji}</span>`; spot(el); area.appendChild(el); return el;
+  };
+  const say = (el, text) => {
+    const s = document.createElement('div'); s.className = 'say'; s.textContent = text;
+    s.style.left = el.style.left; s.style.top = el.style.top; area.appendChild(s); setTimeout(() => s.remove(), 1100);
+  };
 
-  const stars = Array.from({ length: 90 }, () => ({ x: Math.random(), y: Math.random() * .7, r: rand(.4, 1.6), t: rand(0, 6) }));
-  const colors = ['#ff6b9a', '#ffd166', '#5ec8ff', '#b388ff', '#7dffb0', '#ff9f6b'];
-  let balloons = [], arrows = [], bursts = [], score = 0, aim = { x: W * .7, y: H * .4 }, done = false, last = performance.now(), spawnT = 0;
-  const archer = () => ({ x: Math.max(50, W * .1), y: H * .78 });
+  const heart = make('💜');
+  const frog = make('🐸'); frog.classList.add('hide');
 
-  function spawn(){
-    balloons.push({ x: rand(W * .35, W - 30), y: H + 40, r: rand(18, 26), vy: rand(45, 90), sway: rand(0, 6), c: colors[(Math.random() * colors.length) | 0] });
+  heart.addEventListener('pointerdown', e => {
+    e.preventDefault(); if (done) return;
+    score++; $('score').textContent = score;
+    say(heart, pick(sweet));
+    heart.querySelector('span').textContent = pick(['💜', '💖', '💗', '💕', '💞']);
+    spot(heart);
+    if (score >= CONFIG.heartsToCatch) finish();
+  });
+  frog.addEventListener('pointerdown', e => {
+    e.preventDefault(); if (done) return;
+    say(frog, 'ケロッ！ハズレ〜 🐸'); frog.classList.add('hide');
+  });
+
+  // the heart hops away on its own, and a frog sometimes sneaks in
+  const hop = setInterval(() => { if (!done) spot(heart); }, 1500);
+  const frogT = setInterval(() => {
+    if (done || Math.random() < .4) return;
+    spot(frog); frog.classList.remove('hide');
+    setTimeout(() => frog.classList.add('hide'), 1300);
+  }, 2300);
+
+  function finish(){
+    done = true; clearInterval(hop); clearInterval(frogT);
+    heart.classList.add('hide'); frog.classList.add('hide');
+    $('gameDone').style.display = 'flex'; confetti(200);
+    setTimeout(() => {
+      area.style.display = 'none'; area.innerHTML = '';
+      $('gameHud').style.display = 'none'; $('gameDone').style.display = 'none';
+      show('love');
+    }, 2200);
   }
-  for (let i = 0; i < 4; i++){ spawn(); balloons[i].y = rand(H * .4, H); }
-
-  function shoot(e){
-    if (done) return;
-    const tx = e.clientX, ty = e.clientY, a = archer(); aim = { x: tx, y: ty };
-    const ang = Math.atan2(ty - (a.y - 10), tx - a.x), sp = 950;
-    arrows.push({ x: a.x + 20, y: a.y - 10, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp });
-  }
-  const move = e => { aim = { x: e.clientX, y: e.clientY }; };
-  cv.addEventListener('pointerdown', shoot); cv.addEventListener('pointermove', move);
-
-  function drawBalloon(b, t){
-    const x = b.x + Math.sin(t / 600 + b.sway) * 6, y = b.y;
-    g.strokeStyle = 'rgba(255,255,255,.4)'; g.lineWidth = 1;
-    g.beginPath(); g.moveTo(x, y + b.r * 1.2); g.quadraticCurveTo(x + 6, y + b.r * 1.9, x, y + b.r * 2.6); g.stroke();
-    g.fillStyle = b.c; g.beginPath(); g.ellipse(x, y, b.r * .85, b.r * 1.1, 0, 0, 7); g.fill();
-    g.beginPath(); g.moveTo(x - 4, y + b.r * 1.2); g.lineTo(x + 4, y + b.r * 1.2); g.lineTo(x, y + b.r * 1.05); g.fill();
-    g.fillStyle = 'rgba(255,255,255,.45)'; g.beginPath(); g.ellipse(x - b.r * .3, y - b.r * .4, b.r * .18, b.r * .3, -.5, 0, 7); g.fill();
-    b.drawX = x;
-  }
-
-  function drawArcher(t){
-    const a = archer(), ang = Math.atan2(aim.y - (a.y - 10), aim.x - a.x);
-    g.font = '46px serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('🐻', a.x - 6, a.y - 6);
-    g.save(); g.translate(a.x + 14, a.y - 10); g.rotate(ang);
-    g.strokeStyle = '#c98b4a'; g.lineWidth = 4; g.beginPath(); g.arc(0, 0, 26, -1.2, 1.2); g.stroke();
-    g.strokeStyle = '#eee'; g.lineWidth = 1; g.beginPath(); g.moveTo(Math.cos(-1.2) * 26, Math.sin(-1.2) * 26); g.lineTo(-6, 0); g.lineTo(Math.cos(1.2) * 26, Math.sin(1.2) * 26); g.stroke();
-    g.restore();
-    // dashed aim guide
-    g.setLineDash([4, 7]); g.strokeStyle = 'rgba(255,255,255,.25)'; g.beginPath(); g.moveTo(a.x + 20, a.y - 10); g.lineTo(aim.x, aim.y); g.stroke(); g.setLineDash([]);
-    // crosshair
-    g.strokeStyle = '#ff7a9a'; g.lineWidth = 2; g.beginPath(); g.arc(aim.x, aim.y, 11, 0, 7);
-    g.moveTo(aim.x - 17, aim.y); g.lineTo(aim.x - 5, aim.y); g.moveTo(aim.x + 5, aim.y); g.lineTo(aim.x + 17, aim.y);
-    g.moveTo(aim.x, aim.y - 17); g.lineTo(aim.x, aim.y - 5); g.moveTo(aim.x, aim.y + 5); g.lineTo(aim.x, aim.y + 17); g.stroke();
-  }
-
-  function scenery(t){
-    const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#070712'); sky.addColorStop(1, '#16142a');
-    g.fillStyle = sky; g.fillRect(0, 0, W, H);
-    for (const s of stars){ g.globalAlpha = .4 + .6 * Math.abs(Math.sin(t / 900 + s.t)); g.fillStyle = '#fff'; g.beginPath(); g.arc(s.x * W, s.y * H, s.r, 0, 7); g.fill(); }
-    g.globalAlpha = 1;
-    const mx = W * .82, my = H * .2, glow = g.createRadialGradient(mx, my, 10, mx, my, 110);
-    glow.addColorStop(0, 'rgba(255,240,190,.45)'); glow.addColorStop(1, 'rgba(255,240,190,0)');
-    g.fillStyle = glow; g.fillRect(mx - 120, my - 120, 240, 240);
-    g.fillStyle = '#fff3c4'; g.beginPath(); g.arc(mx, my, 30, 0, 7); g.fill();
-    g.fillStyle = '#1d1b33'; g.beginPath(); g.moveTo(0, H * .62);
-    for (let i = 0; i <= 6; i++) g.lineTo(W * i / 6, H * (.55 + (i % 2 ? .0 : .08)));
-    g.lineTo(W, H); g.lineTo(0, H); g.fill();
-    g.fillStyle = '#121022'; g.fillRect(0, H * .8, W, H * .2);
-    g.fillStyle = '#0c0b18'; g.fillRect(0, archer().y + 20, Math.max(110, W * .2), H);
-  }
-
-  function frame(now){
-    const dt = Math.min(.05, (now - last) / 1000); last = now;
-    scenery(now);
-    spawnT -= dt; if (spawnT <= 0 && !done){ spawn(); spawnT = rand(.5, 1.1); }
-    balloons = balloons.filter(b => (b.y -= b.vy * dt) > -80);
-    balloons.forEach(b => drawBalloon(b, now));
-    for (const ar of arrows){
-      ar.vy += 380 * dt; ar.x += ar.vx * dt; ar.y += ar.vy * dt;
-      const ang = Math.atan2(ar.vy, ar.vx);
-      g.save(); g.translate(ar.x, ar.y); g.rotate(ang);
-      g.strokeStyle = '#7dffb0'; g.lineWidth = 2.5; g.beginPath(); g.moveTo(-26, 0); g.lineTo(0, 0); g.stroke();
-      g.fillStyle = '#7dffb0'; g.beginPath(); g.moveTo(4, 0); g.lineTo(-5, -4); g.lineTo(-5, 4); g.fill(); g.restore();
-      for (const b of balloons){
-        if (!b.hit && Math.hypot(ar.x - (b.drawX ?? b.x), ar.y - b.y) < b.r + 6){
-          b.hit = true; ar.dead = true; score++;
-          $('score').textContent = Math.min(score, CONFIG.balloonsToPop);
-          for (let i = 0; i < 18; i++) bursts.push({ x: b.drawX, y: b.y, vx: rand(-160, 160), vy: rand(-160, 160), life: 1, c: b.c });
-          bursts.push({ x: b.drawX, y: b.y, text: ['Great!', 'Nice!', 'Wow!', 'Perfect!'][(Math.random() * 4) | 0], life: 1 });
-        }
-      }
-    }
-    balloons = balloons.filter(b => !b.hit);
-    arrows = arrows.filter(a => !a.dead && a.x < W + 40 && a.y < H + 40 && a.y > -200);
-    for (const p of bursts){
-      p.life -= dt * 1.4;
-      if (p.text){ g.globalAlpha = Math.max(0, p.life); g.fillStyle = '#fff'; g.font = '700 16px Quicksand'; g.fillText(p.text, p.x, p.y - (1 - p.life) * 30); }
-      else { p.x += p.vx * dt; p.y += p.vy * dt; g.globalAlpha = Math.max(0, p.life); g.fillStyle = p.c; g.beginPath(); g.arc(p.x, p.y, 3, 0, 7); g.fill(); }
-    }
-    g.globalAlpha = 1; bursts = bursts.filter(p => p.life > 0);
-    drawArcher(now);
-
-    if (score >= CONFIG.balloonsToPop && !done){
-      done = true; $('gameDone').style.display = 'flex'; confetti(200);
-      setTimeout(() => {
-        cv.style.display = 'none'; $('gameHud').style.display = 'none'; $('gameDone').style.display = 'none';
-        cv.removeEventListener('pointerdown', shoot); cv.removeEventListener('pointermove', move); removeEventListener('resize', size);
-        show('love');
-      }, 2200);
-    }
-    if (!done || $('gameDone').style.display === 'flex') requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
 }
 
-/* ---------- 8. love ---------- */
+/* ---------- 7. love ---------- */
 setImg($('lovePhoto'), photo(0));
 $('loveText').textContent = CONFIG.loveMessage;
 $('loveTag').textContent = CONFIG.loveTag;
 $('loveHome').onclick = () => location.reload();
 $('loveNext').onclick = () => show('iloveyou');
 
-/* ---------- 9. I love you ---------- */
+/* ---------- 8. I love you ---------- */
 $('iluText').textContent = CONFIG.iLoveYouText;
 setImg($('kissAvatar'), photo(1));
 $('iluNext').onclick = () => { show('final'); finale(); };
 
-/* ---------- 10. finale ---------- */
+/* ---------- 9. finale ---------- */
 $('finalName').textContent = CONFIG.name;
-$('finalMsg').textContent = CONFIG.finalMessage + ' — ' + CONFIG.from;
+$('finalMsg').textContent = CONFIG.finalMessage;
+$('finalFrom').textContent = '✨ ' + CONFIG.from;
 let floatTimer;
 function finale(){
   confetti(260);
-  const emos = ['💖', '🎈', '🌸', '✨', '🎂', '💜', '🎁'];
+  const emos = ['💜', '💖', '🎈', '🌸', '✨', '🎂', '💌'];
   let i = 0;
   clearInterval(floatTimer);
   floatTimer = setInterval(() => {
